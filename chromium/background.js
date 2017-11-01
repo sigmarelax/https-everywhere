@@ -30,15 +30,15 @@ initialize();
  *    isExtensionEnabled: Boolean
  *  }
  */
-var httpNowhereOn = false;
-var showCounter = true;
+var httpNowhereOn = true;
+var showCounter = false;
 var isExtensionEnabled = true;
 
 function initializeStoredGlobals(){
   return new Promise(resolve => {
     store.get({
-      httpNowhere: false,
-      showCounter: true,
+      httpNowhere: true,
+      showCounter: false,
       globalEnabled: true,
       enableMixedRulesets: false
     }, function(item) {
