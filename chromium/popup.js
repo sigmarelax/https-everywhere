@@ -108,7 +108,7 @@ function appendRuleLineToListDiv(ruleset, list_div, tab_id) {
 
 function showHttpNowhereUI() {
   // Set up checkbox for HTTP nowhere mode
-  getOption_('httpNowhere', false, function(item) {
+  getOption_('httpNowhere', true, function(item) {
     if (item.httpNowhere) {
       e('http-nowhere-checkbox').checked = true;
     }
@@ -249,7 +249,7 @@ function addManualRule() {
 }
 
 function toggleHttpNowhere() {
-  getOption_('httpNowhere', false, function(item) {
+  getOption_('httpNowhere', true, function(item) {
     setOption_('httpNowhere', !item.httpNowhere);
   });
 }
